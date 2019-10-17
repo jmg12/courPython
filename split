@@ -1,0 +1,12 @@
+In [52]: "toto titi tutu\nireg"
+Out[52]: 'toto titi tutu\nireg'
+
+In [53]: "toto titi tutu\nireg".split(" ")
+Out[53]: ['toto', 'titi', 'tutu\nireg']
+
+In [54]: "toto titi tutu\nireg".split()
+Out[54]: ['toto', 'titi', 'tutu', 'ireg']
+
+In [55]: "toto titi tutu\nireg".split()
+
+

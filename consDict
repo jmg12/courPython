@@ -1,0 +1,18 @@
+contructeur dict()
+
+In [60]: a = {"toto": 12}
+
+In [61]: b = dict(a)
+
+In [62]: b
+Out[62]: {'toto': 12}
+
+In [63]: a['titi'] = 13
+
+In [64]: a
+Out[64]: {'titi': 13, 'toto': 12}
+
+In [65]: b
+Out[65]: {'toto': 12}
+
+

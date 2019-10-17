@@ -1,0 +1,30 @@
+def f(l=[]):
+    ...:     l.append(1)
+    ...:     return l
+f()
+Out[16]: [1]
+
+In [17]: f()
+Out[17]: [1, 1]
+
+In [18]: f()
+Out[18]: [1, 1, 1]
+
+In [19]: f()
+Out[19]: [1, 1, 1, 1]
+
+def f(l=None):
+    ...:     if l is None:
+    ...:         l = []
+    ...:     l.append(1)
+    ...:     return l
+    ...: 
+
+In [21]: f()
+Out[21]: [1]
+
+In [22]: 
+
+In [22]: f()
+Out[22]: [1]
+

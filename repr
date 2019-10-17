@@ -1,0 +1,7 @@
+In [15]: print("\xff")
+�
+
+In [16]: print(repr("\xff"))
+'\xff'
+
+

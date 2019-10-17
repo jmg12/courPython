@@ -1,0 +1,7 @@
+In [55]: rot13 = lambda x: x.translate(table)
+
+In [56]: def rot13(x):
+    ...:     return x.translate(table)
+    ...: 
+
+

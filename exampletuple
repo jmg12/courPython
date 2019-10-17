@@ -1,0 +1,46 @@
+creation d'un tuple:
+In [23]: (1,)
+Out[23]: (1,)
+
+assignation à var l:
+In [24]: l = (1,)
+
+affiche la 1er col de l:
+In [25]: l[0]
+Out[25]: 1
+
+essais d'affecter la col0 de l:
+In [26]: l[0] = 2
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+<ipython-input-26-4987e628332b> in <module>()
+----> 1 l[0] = 2
+
+TypeError: 'tuple' object does not support item assignment
+
+ajout un nouvel objet l dans l (l = l+ new obj):
+In [27]: l += (2,)
+
+affiche le tuple l:
+In [28]: l
+Out[28]: (1, 2)
+
+vide le tuple l:
+In [29]: l = ([],)
+
+essaie d'affecter la col0 avec 1:
+In [30]: l[0] = 1
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+<ipython-input-30-456d20ba83cd> in <module>()
+----> 1 l[0] = 1
+
+TypeError: 'tuple' object does not support item assignment
+
+utilisation méthode append(qui ajoute) pour l'élément de la liste l[0] donc pas dans le tuple
+mais dans l'élément de la liste l[0]:
+In [31]: l[0].append(1)
+
+In [32]: l
+Out[32]: ([1],)
+
