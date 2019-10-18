@@ -19,7 +19,7 @@ class V(object):
     def __init__(self, *coords):
         """*attr : attribue non défini"""
         self.coords = coords
-    
+
     def __len__(self):
         return len(self.coords)
     
