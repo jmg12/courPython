@@ -1,0 +1,34 @@
+In [45]: 128
+Out[45]: 128
+
+In [46]: _.bit_length
+Out[46]: <function bit_length>
+
+In [47]: (128).bit_length
+Out[47]: <function bit_length>
+
+In [48]: getattr(128, "bit_length")
+Out[48]: <function bit_length>
+
+In [49]: getattr(128, "bit_length")()
+Out[49]: 8
+
+In [50]: y = "bit_length"
+
+In [51]: (128).y
+---------------------------------------------------------------------------
+AttributeError                            Traceback (most recent call last)
+<ipython-input-51-32197f2b0cb4> in <module>()
+----> 1 (128).y
+
+AttributeError: 'int' object has no attribute 'y'
+
+In [52]: d = 128
+
+In [53]: eval("(%d).%s()" % (d, y))
+Out[53]: 8
+
+In [54]: getattr(d, y)()
+Out[54]: 8
+
+

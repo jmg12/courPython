@@ -1,0 +1,5 @@
+tuple(x ** 2 for x in xrange(20))
+frozenset(x ** 2 for x in xrange(20))
+bytearray(chr (x) for x in xrange(20))
+str(chr(x) for x in xrange(20)) et unicode ne fonctionne pas
+On peut utiliser ``.join(chr(x) for x in xrange(20)) (et u ''.join)

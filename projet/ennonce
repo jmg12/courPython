@@ -9,10 +9,10 @@ pre-requis:
 qemu-system-x86_64 -m 512M -enable-kvm -net nic,macaddr=24:be:05:17:58:96,netdev=net0 -netdev socket,id=net0,connect=:1234 -cdrom alpine-standard-3.10.2-x86_64.iso 
 
 #old QEMU
-qemu-system-x86_64 -m 512M -vga cirrus -curse -enable-kvm -net nic,macaddr=24:be:05:17:58:96,name=net0 -netdev socket,id=net0,connect=127.0.0.1:1234 -cdrom alpine-standard-3.10.2-x86_64.iso 
+qemu-system-x86_64 -m 512M -vga cirrus -curses -enable-kvm -net nic,macaddr=24:be:05:17:58:96,name=net0 -netdev socket,id=net0,connect=127.0.0.1:1234 -cdrom alpine-standard-3.10.2-x86_64.iso 
 
 #alternative old
-qemu-system-x86_64 -m 512M -enable-kvm -net nic,macaddr=24:be:05:17:58:96,vlan=0 -net socket,vlan=0,connect=127.0.0.1:1234 -vga cirrus -curse -cdrom alpine-standard-3.10.2-x86_64.iso 
+qemu-system-x86_64 -m 512M -enable-kvm -net nic,macaddr=24:be:05:17:58:96,vlan=0 -net socket,vlan=0,connect=127.0.0.1:1234 -vga cirrus -curses -cdrom alpine-standard-3.10.2-x86_64.iso 
 
 login : root [Enter]
 

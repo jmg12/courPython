@@ -1,0 +1,163 @@
+In [65]: b"toto"
+Out[65]: 'toto'
+
+In [66]: "toto"
+Out[66]: 'toto'
+
+In [67]: b"toto"[0]
+Out[67]: 't'
+
+In [68]: b"toto"[0:1]
+Out[68]: 't'
+
+In [69]: b"\x00\x00\x00"
+Out[69]: '\x00\x00\x00'
+
+In [70]: 
+
+In [70]: b"\x00\x00\x00D"
+Out[70]: '\x00\x00\x00D'
+
+In [71]: import struct
+
+In [72]: d = "b\x00\x00\x00"
+
+In [73]: struct.unpack('>I',d)
+Out[73]: (1644167168,)
+
+
+In [74]: struct.unpack('>I',d)[0}
+  File "<ipython-input-74-39b8312b09ea>", line 1
+    struct.unpack('>I',d)[0}
+                           ^
+SyntaxError: invalid syntax
+
+
+In [75]: struct.unpack('>I',d)[0]
+Out[75]: 1644167168
+
+In [76]: struct.unpack('>I',d)
+Out[76]: (1644167168,)
+
+In [77]: d = "b\x00\x00\x01D"
+
+In [78]: struct.unpack('>I',d)[0]
+---------------------------------------------------------------------------
+error                                     Traceback (most recent call last)
+<ipython-input-78-bc4cba114a1b> in <module>()
+----> 1 struct.unpack('>I',d)[0]
+
+error: unpack requires a string argument of length 4
+
+In [79]: struct.unpack('>BBBB',d)[0]
+---------------------------------------------------------------------------
+error                                     Traceback (most recent call last)
+<ipython-input-79-24914eeb2173> in <module>()
+----> 1 struct.unpack('>BBBB',d)[0]
+
+error: unpack requires a string argument of length 4
+
+
+In [80]: struct.unpack('>BBBB',d)[0]
+---------------------------------------------------------------------------
+error                                     Traceback (most recent call last)
+<ipython-input-80-24914eeb2173> in <module>()
+----> 1 struct.unpack('>BBBB',d)[0]
+
+error: unpack requires a string argument of length 4
+
+In [81]: d = "b\x00\x00\x01D"
+
+In [82]: d = "b\x00\x00\x01"
+
+In [83]: d
+Out[83]: 'b\x00\x00\x01'
+
+In [84]: struct.unpack('>I',d)[0]
+Out[84]: 1644167169
+
+In [85]: d = "b\x00\x00\x01D"
+
+In [86]: struct.unpack('>I',d)[0]
+---------------------------------------------------------------------------
+error                                     Traceback (most recent call last)
+<ipython-input-86-bc4cba114a1b> in <module>()
+----> 1 struct.unpack('>I',d)[0]
+
+error: unpack requires a string argument of length 4
+
+In [87]: struct.unpack('>I',d)[0]
+---------------------------------------------------------------------------
+error                                     Traceback (most recent call last)
+<ipython-input-87-bc4cba114a1b> in <module>()
+----> 1 struct.unpack('>I',d)[0]
+
+error: unpack requires a string argument of length 4
+
+In [88]: d = "b\x00\x00\x00"
+
+In [89]: struct.unpack('>I',d)[0]
+Out[89]: 1644167168
+
+In [90]: struct.unpack('>I',d)[0]
+Out[90]: 1644167168
+
+In [91]: struct.unpack('>I',d)
+Out[91]: (1644167168,)
+
+In [92]: d = "b\x00\x00\x00D"
+
+In [93]: struct.unpack('>I',d)[0]
+---------------------------------------------------------------------------
+error                                     Traceback (most recent call last)
+<ipython-input-93-bc4cba114a1b> in <module>()
+----> 1 struct.unpack('>I',d)[0]
+
+error: unpack requires a string argument of length 4
+
+In [94]: d = "b\x00\x00\x00"
+
+In [95]: struct.unpack('>HH',d)[0]
+Out[95]: 25088
+
+In [96]: struct.unpack('>BBBB',d)[0]
+Out[96]: 98
+
+In [97]: struct.unpack('>II',d)[0]
+---------------------------------------------------------------------------
+error                                     Traceback (most recent call last)
+<ipython-input-97-dd2eae1f82a2> in <module>()
+----> 1 struct.unpack('>II',d)[0]
+
+error: unpack requires a string argument of length 8
+
+In [98]: struct.unpack('>IHBB',d)[0]
+---------------------------------------------------------------------------
+error                                     Traceback (most recent call last)
+<ipython-input-98-d0e234d1d729> in <module>()
+----> 1 struct.unpack('>IHBB',d)[0]
+
+error: unpack requires a string argument of length 8
+
+In [99]: d = "\x00\x00\x00D"
+
+In [100]: struct.unpack('>I',d)[0]
+Out[100]: 68
+
+In [101]: d = "\x00\x00\x00"
+
+In [102]: struct.unpack('>I',d)[0]
+---------------------------------------------------------------------------
+error                                     Traceback (most recent call last)
+<ipython-input-102-bc4cba114a1b> in <module>()
+----> 1 struct.unpack('>I',d)[0]
+
+error: unpack requires a string argument of length 4
+
+In [103]: d = "\x00\x00\x00D"
+
+In [104]: struct.unpack('>HH',d)[0]
+Out[104]: 0
+
+
+

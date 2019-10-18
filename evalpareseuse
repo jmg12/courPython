@@ -1,0 +1,22 @@
+evalue l'expression de gauche à droite et quand il a faut il s'arrête
+
+In [13]: l = []
+
+In [14]: l and 1/0
+Out[14]: []
+
+In [15]: l or 1/0
+---------------------------------------------------------------------------
+ZeroDivisionError                         Traceback (most recent call last)
+<ipython-input-15-ca85f72aef3e> in <module>()
+----> 1 l or 1/0
+
+ZeroDivisionError: integer division or modulo by zero
+
+In [16]: if l and l[0] == 'toto':
+    ...:     print('ok')
+
+shell:
+# mkdir toto && cd toto && function
+
+# mkdir toto || echo 'Attention'

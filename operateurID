@@ -1,0 +1,19 @@
+In [19]: a = []
+
+In [20]: b = []
+
+In [21]: a == b
+Out[21]: True
+
+In [22]: a is b
+Out[22]: False
+
+In [23]: b = a
+
+In [24]: a == b
+Out[24]: True
+
+In [25]: a is b
+Out[25]: True
+
+

@@ -1,0 +1,24 @@
+In [26]: l = [1, 2, 3]
+
+In [27]: l.reverse()
+
+In [28]: l
+Out[28]: [3, 2, 1]
+
+In [29]: reversed(l)
+Out[29]: <listreverseiterator at 0x7f6f42be6710>
+
+In [30]: list(_)
+Out[30]: [1, 2, 3]
+
+In [31]: l
+Out[31]: [3, 2, 1]
+
+In [32]: l.sort()
+
+In [33]: l
+Out[33]: [1, 2, 3]
+
+In [34]: sorted(l, reverse=True)
+Out[34]: [3, 2, 1]
+

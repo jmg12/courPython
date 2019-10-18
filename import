@@ -1,0 +1,29 @@
+In [55]: y = "sys"
+
+In [56]: exec("import %s as y" % y)
+
+In [57]: y
+Out[57]: <module 'sys' (built-in)>
+
+In [58]: y = "os; os.system('ls /tmp/toto')"
+
+In [59]: y = "os; os.system('ls /tmp/toto'); import sys"
+
+In [60]: exec("import %s as y" %y)
+ls: impossible d'accéder à '/tmp/toto': Aucun fichier ou dossier de ce type
+
+In [61]: y = __import__(y)
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+<ipython-input-61-f9aaf7a853d3> in <module>()
+----> 1 y = __import__(y)
+
+TypeError: __import__() argument 1 must be string, not module
+
+In [62]: y = "sys"
+
+In [63]: y = __import__(y)
+
+In [64]: y
+Out[64]: <module 'sys' (built-in)>
+

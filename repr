@@ -4,4 +4,30 @@ In [15]: print("\xff")
 In [16]: print(repr("\xff"))
 '\xff'
 
+autre:
+
+In [1]: coords = (1, 2, 3)
+
+In [2]: ', '.join(coords)
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+<ipython-input-2-c71ba396208e> in <module>()
+----> 1 ', '.join(coords)
+
+TypeError: sequence item 0: expected string, int found
+
+In [3]: ', '.join(['1','2'])
+Out[3]: '1, 2'
+
+In [4]: coords
+Out[4]: (1, 2, 3)
+
+In [5]: str(coords)
+Out[5]: '(1, 2, 3)'
+
+In [6]: [repr(v) for v in coords]
+Out[6]: ['1', '2', '3']
+
+In [7]: ', '.join(repr(c) for c in coords)
+Out[7]: '1, 2, 3'
 

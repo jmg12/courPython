@@ -22,6 +22,10 @@ print("CONNECT %r" % (addr,))
 while True:
     '''
     print(repr(conn.recv(4096))) #je reçois 4K sur la socket conn
+    
+    data = conn.recv(4096)
+    len = struct.unpack('>I', data)[0]
+    data += conn.recv(len)
     '''
     data = conn.recv(4096)
     conn.send(data)
